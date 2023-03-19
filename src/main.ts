@@ -19,7 +19,7 @@ async function deploy() {
 
 async function sendTx() {
     const reciept = await wallet.sendTransaction({ to: config.recipient, value: "0" })
-    console.log(reciept.hash)
+    console.log('sent transaction: ', reciept.hash)
 }
 
 function sleep(ms: number) {
