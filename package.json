@@ -1,0 +1,26 @@
+{
+  "name": "autonity-chalenges",
+  "version": "1.0.0",
+  "description": "automations for incentive game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ben-Haslam/autonity-chalenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ben-Haslam/autonity-chalenges/issues"
+  },
+  "homepage": "https://github.com/Ben-Haslam/autonity-chalenges#readme",
+  "dependencies": {
+    "ethers": "5.4",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3"
+  }
+}

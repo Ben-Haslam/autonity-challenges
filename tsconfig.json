@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "importHelpers": true,
+        "skipLibCheck": true,
+        "downlevelIteration": true,
+        "esModuleInterop": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        "target": "ES2021",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "outDir": "./build",
+        "baseUrl": "./",
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
+    },
+    "include": [
+        "./configuration/",
+        "./src",
+        "./tests",
+        "./configuration/*.json",
+        "scripts/*.ts"
+    ]
+}
