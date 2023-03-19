@@ -1,5 +1,5 @@
-# autonity-chalenges
-automations for incentive game
+# autonity-challenges
+typescript code for automations for incentive game
 
 - Build: `npm run build`
 - Run: `npm run start`
