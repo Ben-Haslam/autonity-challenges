@@ -28,18 +28,28 @@ function sleep(ms: number) {
 
 async function main() {
     // deploy 5 contracts
-    for (let i = 0; i < 5; i++) {
-        await deploy();
+    let i = 0
+    while (i < 5) {
+        try {
+            await deploy();
+            i++;
+        } catch (error) {
+            console.log(error)
+        }
     }
     // send 25,000 Tx
     let blocknumber = await provider.getBlockNumber();
-    let i = 0
+    i = 0
     while (i < 25000) {
         let newBlocknumber = await provider.getBlockNumber();
         if (newBlocknumber > blocknumber) {
-            await sendTx();
-            blocknumber = newBlocknumber;
-            i++;
+            try {
+                await sendTx();
+                blocknumber = newBlocknumber;
+                i++;
+            } catch (error) {
+                console.log(error)
+            }
         } else {
             await sleep(500)
         }
