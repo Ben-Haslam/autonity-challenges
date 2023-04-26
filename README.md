@@ -2,7 +2,7 @@
 
 Typescript code for automations for the incentive game.
 
-Will automatically deploy 5 contracts and send 25,000 Tx in different blocks.
+Will automatically deploy 25 contracts and send 50,000 Tx in different blocks, in a loop forever.
 
 - Build: `npm run build`
 - Run: `npm run start`
@@ -10,9 +10,9 @@ Will automatically deploy 5 contracts and send 25,000 Tx in different blocks.
 ## Run with docker
 
 - Build docker image: `docker build -t challenges-bot .`
-- Run with docker: `docker run -d --rm --name autonity-challenge-bot  challenges-bot`
+- Run with docker: `docker run -d --restart --name autonity-challenge-bot  challenges-bot`
 
-## Setup cron for scheduling 
+## Setup cron for scheduling
 
 - Install cron
 - Edit crontab: `crontab -e`

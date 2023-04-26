@@ -27,31 +27,34 @@ function sleep(ms: number) {
 }
 
 async function main() {
-    // deploy 5 contracts
-    let i = 0
-    while (i < 5) {
-        try {
-            await deploy();
-            i++;
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    // send 25,000 Tx
-    let blocknumber = await provider.getBlockNumber();
-    i = 0
-    while (i < 25000) {
-        let newBlocknumber = await provider.getBlockNumber();
-        if (newBlocknumber > blocknumber) {
+    // loop to make the thing run forever
+    while (true){
+        // deploy 5 contracts
+        let i = 0
+        while (i < 25) {
             try {
-                await sendTx();
-                blocknumber = newBlocknumber;
+                await deploy();
                 i++;
             } catch (error) {
                 console.log(error)
             }
-        } else {
-            await sleep(500)
+        }
+        // send 25,000 Tx
+        let blocknumber = await provider.getBlockNumber();
+        i = 0
+        while (i < 50000) {
+            let newBlocknumber = await provider.getBlockNumber();
+            if (newBlocknumber > blocknumber) {
+                try {
+                    await sendTx();
+                    blocknumber = newBlocknumber;
+                    i++;
+                } catch (error) {
+                    console.log(error)
+                }
+            } else {
+                await sleep(500)
+            }
         }
     }
 }
