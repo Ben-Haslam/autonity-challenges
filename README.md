@@ -10,7 +10,7 @@ Will automatically deploy 25 contracts and send 50,000 Tx in different blocks, i
 ## Run with docker
 
 - Build docker image: `docker build -t challenges-bot .`
-- Run with docker: `docker run -d --restart --name autonity-challenge-bot  challenges-bot`
+- Run with docker: `docker run -d --restart always --name autonity-challenge-bot  challenges-bot`
 
 ## Setup cron for scheduling
 
